@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     container.style.opacity = 1;
     container.style.transform = "translateY(0)";
 
-    // Music Toggle
+    
     const music = document.getElementById("bg-music");
     const toggleMusic = document.getElementById("toggle-music");
 
