@@ -6,7 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const music = document.getElementById("bg-music");
     const toggleMusic = document.getElementById("toggle-music");
 
-    music.play();
+    music.play().catch(function() {
+        toggleMusic.style.display = 'block';
+    });
 
     toggleMusic.addEventListener("click", function() {
         if (music.paused) {
