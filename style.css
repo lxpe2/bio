@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #0d0d0d;
+    background: #0a0a0a;
     color: white;
     display: flex;
     align-items: center;
@@ -18,10 +18,10 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.5);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
     width: 90%;
     max-width: 400px;
     backdrop-filter: blur(10px);
@@ -35,12 +35,18 @@ body {
     height: 100px;
     border-radius: 50%;
     margin-bottom: 10px;
-    border: 3px solid #00ffff;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+    border-color: white;
 }
 
 h1 {
     font-size: 24px;
-    text-shadow: 0px 0px 5px #00ffff;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
 }
 
 p {
@@ -54,19 +60,35 @@ p {
 
 .links a {
     display: block;
-    background: #1a1a1a;
+    background: rgba(255, 255, 255, 0.1);
     padding: 10px;
     margin: 5px 0;
     border-radius: 5px;
     text-decoration: none;
     color: white;
-    transition: 0.3s;
-    box-shadow: 0px 0px 5px rgba(0, 255, 255, 0.5);
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.links a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.4s ease-in-out;
+}
+
+.links a:hover::before {
+    left: 100%;
 }
 
 .links a:hover {
-    background: #00ffff;
-    color: #0d0d0d;
+    background: white;
+    color: black;
     transform: scale(1.05);
 }
 
@@ -75,8 +97,8 @@ p {
 }
 
 #toggle-music {
-    background: #00ffff;
-    color: #0d0d0d;
+    background: white;
+    color: black;
     padding: 8px 15px;
     border: none;
     border-radius: 5px;
@@ -85,7 +107,7 @@ p {
 }
 
 #toggle-music:hover {
-    background: #0d0d0d;
-    color: #00ffff;
-    box-shadow: 0px 0px 10px #00ffff;
+    background: black;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
 }
