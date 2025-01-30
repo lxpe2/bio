@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", function() {
     container.style.opacity = 1;
     container.style.transform = "translateY(0)";
 
-    
     const music = document.getElementById("bg-music");
     const toggleMusic = document.getElementById("toggle-music");
+
+    music.play();
 
     toggleMusic.addEventListener("click", function() {
         if (music.paused) {
