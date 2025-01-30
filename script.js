@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.querySelector(".container").style.opacity = 0;
-    setTimeout(() => {
-        document.querySelector(".container").style.transition = "opacity 1s";
-        document.querySelector(".container").style.opacity = 1;
-    }, 300);
-});
+    const container = document.querySelector(".container");
+    container.style.opacity = 1;
+    container.style.transform = "translateY(0)";
+
+    // Music Toggle
+    const music = document.getElementById("bg-music");
+    const toggleMusic =
