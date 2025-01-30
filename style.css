@@ -8,7 +8,7 @@
 }
 
 body {
-    background: #0a0a0a;
+    background: url('background.jpg') no-repeat center center/cover;
     color: white;
     display: flex;
     align-items: center;
@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
@@ -36,12 +36,13 @@ body {
     border-radius: 50%;
     margin-bottom: 10px;
     border: 3px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
 .profile-pic:hover {
     transform: scale(1.1);
     border-color: white;
+    box-shadow: 0px 0px 10px white;
 }
 
 h1 {
