@@ -5,4 +5,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Music Toggle
     const music = document.getElementById("bg-music");
-    const toggleMusic =
+    const toggleMusic = document.getElementById("toggle-music");
+
+    toggleMusic.addEventListener("click", function() {
+        if (music.paused) {
+            music.play();
+            toggleMusic.textContent = "⏸ Pause";
+        } else {
+            music.pause();
+            toggleMusic.textContent = "🎵 Play";
+        }
+    });
+});
